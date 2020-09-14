@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>ViewController</key>
+    <dict>
+        <key>Title</key>
+        <dict>
+            <key>value</key>
+            <string>Override Title</string>
+            <key>comment</key>
+            <string>This is the title displayed at the top of the screen.</string>
+        </dict>
+    </dict>
+</dict>
+</plist>

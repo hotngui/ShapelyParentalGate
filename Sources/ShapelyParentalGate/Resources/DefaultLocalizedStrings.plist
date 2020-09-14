@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ViewController</key>
+	<dict>
+		<key>Countdown</key>
+		<dict>
+			<key>value</key>
+			<string>Time Left:</string>
+			<key>comment</key>
+			<string>This is the label at the bottom of the screen that preceeds the actual countdown value.</string>
+		</dict>
+		<key>DescriptionTriangle</key>
+		<dict>
+			<key>value</key>
+			<string>To continue, drag the triangle shape to the square in the corner.</string>
+			<key>comment</key>
+			<string>This is the description shown on the screen just below the title when the target shape is a triangle.</string>
+		</dict>
+        <key>DescriptionSquare</key>
+        <dict>
+            <key>value</key>
+            <string>To continue, drag the square shape to the square in the corner.</string>
+            <key>comment</key>
+            <string>This is the description shown on the screen just below the title when the target shape is a square.</string>
+        </dict>
+        <key>DescriptionPentagon</key>
+        <dict>
+            <key>value</key>
+            <string>To continue, drag the pentagon shape to the square in the corner.</string>
+            <key>comment</key>
+            <string>This is the description shown on the screen just below the title when the target shape is a pentagon.</string>
+        </dict>
+        <key>DescriptionCircle</key>
+        <dict>
+            <key>value</key>
+            <string>To continue, drag the circle shape to the square in the corner.</string>
+            <key>comment</key>
+            <string>This is the description shown on the screen just below the title when the target shape is a circle.</string>
+        </dict>
+		<key>Title</key>
+		<dict>
+			<key>value</key>
+			<string>Parental Gate</string>
+			<key>comment</key>
+			<string>This is the title displayed at the top of the screen.</string>
+		</dict>
+	</dict>
+	<key>TooManyAttempts</key>
+	<dict>
+		<key>OK</key>
+		<dict>
+			<key>value</key>
+			<string>OK</string>
+			<key>comment</key>
+			<string>The title of the button used to dismiss the alert</string>
+		</dict>
+		<key>Title</key>
+		<dict>
+			<key>value</key>
+			<string>Too Many Tries!</string>
+			<key>comment</key>
+			<string>The title of the alert.</string>
+		</dict>
+        <key>Description</key>
+        <dict>
+            <key>value</key>
+            <string>You tried to many times without getting the right shape into the box.</string>
+            <key>comment</key>
+            <string>This is the message the user sees after they exceeded the maximum number of attempts.</string>
+        </dict>
+	</dict>
+    <key>TimeExpired</key>
+    <dict>
+        <key>OK</key>
+        <dict>
+            <key>value</key>
+            <string>OK</string>
+            <key>comment</key>
+            <string>The title of the button used to dismiss the alert</string>
+        </dict>
+        <key>Title</key>
+        <dict>
+            <key>value</key>
+            <string>Time has Expired!</string>
+            <key>comment</key>
+            <string>The title of the alert.</string>
+        </dict>
+        <key>Description</key>
+        <dict>
+            <key>value</key>
+            <string>You failed to drag the correct shape to the target box in the specified amount of time.</string>
+            <key>comment</key>
+            <string>This is the message the user sees after they exceeded the maximum number of attempts.</string>
+        </dict>
+    </dict>
+</dict>
+</plist>

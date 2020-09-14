@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G2a-1j-q8R">
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17124"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Shapely Parental Gate-->
+        <scene sceneID="NFg-ET-ilH">
+            <objects>
+                <viewController storyboardIdentifier="ShapelyParentalGate" id="G2a-1j-q8R" customClass="ShapelyParentalGate" customModule="ShapelyParentalGate" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="pML-Lw-MwL">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" allowsTransparency="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ici-uG-42Q">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </skView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parental Gate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNH-Ti-O3H">
+                                <rect key="frame" x="287" y="10" width="194.5" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To continue, drag the &quot;circle&quot; to the square in the corner." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTf-qn-mAW">
+                                <rect key="frame" x="20" y="71" width="728" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="etO-Iq-z1s">
+                                <rect key="frame" x="303" y="992" width="162" height="24"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="Countdown:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nmr-3q-ywf">
+                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="24"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0j2-WG-jjG">
+                                        <rect key="frame" x="108.5" y="0.0" width="53.5" height="24"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xaO-7L-ClB"/>
+                        <color key="backgroundColor" red="1" green="0.74200206851914174" blue="0.23017969170549035" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Ici-uG-42Q" secondAttribute="bottom" id="9PO-5i-Ltp"/>
+                            <constraint firstAttribute="trailing" secondItem="Ici-uG-42Q" secondAttribute="trailing" id="B12-mt-Wz5"/>
+                            <constraint firstItem="Ici-uG-42Q" firstAttribute="top" secondItem="pML-Lw-MwL" secondAttribute="top" id="ECR-rg-NQF"/>
+                            <constraint firstItem="etO-Iq-z1s" firstAttribute="centerX" secondItem="pML-Lw-MwL" secondAttribute="centerX" id="HLE-aR-kuN"/>
+                            <constraint firstItem="aTf-qn-mAW" firstAttribute="top" secondItem="oNH-Ti-O3H" secondAttribute="bottom" constant="20" id="LP3-XA-ow4"/>
+                            <constraint firstItem="aTf-qn-mAW" firstAttribute="leading" secondItem="pML-Lw-MwL" secondAttribute="leadingMargin" id="WPm-Br-XIj"/>
+                            <constraint firstItem="oNH-Ti-O3H" firstAttribute="centerX" secondItem="pML-Lw-MwL" secondAttribute="centerX" id="YGP-e4-YNF"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="etO-Iq-z1s" secondAttribute="bottom" id="gXc-vh-4sR"/>
+                            <constraint firstItem="Ici-uG-42Q" firstAttribute="leading" secondItem="pML-Lw-MwL" secondAttribute="leading" id="k8y-07-v8r"/>
+                            <constraint firstItem="oNH-Ti-O3H" firstAttribute="top" secondItem="xaO-7L-ClB" secondAttribute="top" constant="10" id="oNq-xf-PF2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aTf-qn-mAW" secondAttribute="trailing" id="rcc-aB-qmp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countdownLabel" destination="Nmr-3q-ywf" id="8ge-xs-7Rm"/>
+                        <outlet property="countdownValueLabel" destination="0j2-WG-jjG" id="KfH-po-3vE"/>
+                        <outlet property="descriptionLabel" destination="aTf-qn-mAW" id="Nfp-qw-1Yb"/>
+                        <outlet property="skView" destination="Ici-uG-42Q" id="JBO-Wf-tFS"/>
+                        <outlet property="titleLabel" destination="oNH-Ti-O3H" id="bCp-mQ-Df3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AyA-FX-qRg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21" y="149"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
