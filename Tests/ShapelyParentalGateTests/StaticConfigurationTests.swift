@@ -1,6 +1,6 @@
 //  
 // Created by Joey Jarosz on 9/13/20.
-// Copyright © 2020 hot-n-GUI, LLC. All rights reserved.
+// Copyright © 2020-2026 hot-n-GUI, LLC. All rights reserved.
 //
 
 import XCTest

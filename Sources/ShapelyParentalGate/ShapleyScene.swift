@@ -1,13 +1,13 @@
 //  
 // Created by Joey Jarosz on 9/9/20.
-// Copyright © 2020 hot-n-GUI, LLC. All rights reserved.
+// Copyright © 2020-2026 hot-n-GUI, LLC. All rights reserved.
 //
 
 import UIKit
 import SpriteKit
 
 ///
-protocol ShapelySceneDelegate: class {
+protocol ShapelySceneDelegate: AnyObject {
     func shapelyScene(_ scene: ShapelyScene, dropped shape: ShapelyScene.Shape?) -> Bool
 }
 
@@ -57,8 +57,8 @@ class ShapelyScene: SKScene {
 
         // Create the shapes...
         //
-        let width = view.bounds.width - Constants.shapeSize.width
-        let height = view.bounds.height - Constants.shapeSize.height
+        let width = self.size.width - Constants.shapeSize.width
+        let height = self.size.height - Constants.shapeSize.height
         let yStart = Constants.shapeSize.height
         let xStart = Constants.shapeSize.width
 

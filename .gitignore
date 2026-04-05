@@ -25,3 +25,7 @@ xcuserdata/
 
 .build/
 
+
+# Media assets hosted outside the repo (e.g. GitHub user-attachments / release assets)
+# to avoid bloating SwiftPM clones for consumers.
+Docs/*.mp4

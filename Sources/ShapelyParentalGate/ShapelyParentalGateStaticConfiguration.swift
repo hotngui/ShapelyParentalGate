@@ -1,13 +1,13 @@
 //  
 // Created by Joey Jarosz on 9/12/20.
-// Copyright © 2020 hot-n-GUI, LLC. All rights reserved.
+// Copyright © 2020-2026 hot-n-GUI, LLC. All rights reserved.
 //
 
 import Foundation
 
 /// This struct allows for the overriding of default configuraiton information that affects the look and behavior of the _Parental Gate_.
 ///
-public struct ShapelyParentalGateStaticConfiguration {
+public struct ShapelyParentalGateStaticConfiguration: Sendable {
     let localizedStringsFilePath: String?
     let maximumFailedAttempts: Int?
     let supportsTimeOut: Bool?

@@ -2,19 +2,95 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Primary</key>
+	<dict>
+		<key>Title</key>
+		<dict>
+			<key>value</key>
+			<string>Parental Gate</string>
+			<key>comment</key>
+			<string></string>
+		</dict>
+		<key>Countdown</key>
+		<dict>
+			<key>value</key>
+			<string>Time Left:</string>
+			<key>comment</key>
+			<string></string>
+		</dict>
+		<key>DescriptionTriangle</key>
+		<dict>
+			<key>value</key>
+			<string>To continue, drag the triangle shape to the square in the corner.</string>
+			<key>comment</key>
+			<string></string>
+		</dict>
+		<key>DescriptionSquare</key>
+		<dict>
+			<key>value</key>
+			<string>To continue, drag the square shape to the square in the corner.</string>
+			<key>comment</key>
+			<string></string>
+		</dict>
+		<key>DescriptionPentagon</key>
+		<dict>
+			<key>value</key>
+			<string>To continue, drag the pentagon shape to the square in the corner.</string>
+			<key>comment</key>
+			<string></string>
+		</dict>
+		<key>DescriptionCircle</key>
+		<dict>
+			<key>value</key>
+			<string>To continue, drag the circle shape to the square in the corner.</string>
+			<key>comment</key>
+			<string></string>
+		</dict>
+	</dict>
 	<key>TooManyAttempts</key>
 	<dict>
 		<key>OK</key>
 		<dict>
 			<key>value</key>
-			<string>BAD</string>
+			<string>OK</string>
 			<key>comment</key>
 			<string></string>
 		</dict>
 		<key>Title</key>
 		<dict>
 			<key>value</key>
-			<string>A Title</string>
+			<string>Too Many Tries!</string>
+			<key>comment</key>
+			<string></string>
+		</dict>
+		<key>Description</key>
+		<dict>
+			<key>value</key>
+			<string>You tried too many times without getting the right shape into the box.</string>
+			<key>comment</key>
+			<string></string>
+		</dict>
+	</dict>
+	<key>TimeExpired</key>
+	<dict>
+		<key>OK</key>
+		<dict>
+			<key>value</key>
+			<string>OK</string>
+			<key>comment</key>
+			<string></string>
+		</dict>
+		<key>Title</key>
+		<dict>
+			<key>value</key>
+			<string>Time has Expired!</string>
+			<key>comment</key>
+			<string></string>
+		</dict>
+		<key>Description</key>
+		<dict>
+			<key>value</key>
+			<string>You failed to drag the correct shape to the target box in the specified amount of time.</string>
 			<key>comment</key>
 			<string></string>
 		</dict>

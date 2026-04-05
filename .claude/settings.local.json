@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la /Users/joeyjarosz/Development-hotngui/iOS/ShapelyParentalGate/README*)",
+      "Bash(git check-ignore:*)",
+      "Bash(git mv:*)"
+    ]
+  }
+}

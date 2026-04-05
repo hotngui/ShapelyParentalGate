@@ -1,11 +1,12 @@
-// swift-tools-version:5.3
+// swift-tools-version:6.2
 
 import PackageDescription
 
 let package = Package(
     name: "ShapelyParentalGate",
+    defaultLocalization: "en",
     platforms: [
-        .iOS(.v14)
+        .iOS(.v26)
     ],
     products: [
         .library(
@@ -16,7 +17,7 @@ let package = Package(
         .target(
             name: "ShapelyParentalGate",
             resources: [
-                .process("Resources/DefaultLocalizedStrings.plist")
+                .process("Resources")
             ]
         ),
         .testTarget(

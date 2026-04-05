@@ -1,18 +1,18 @@
 //
 // Created by Joey Jarosz on 9/10/20.
-// Copyright © 2020 hot-n-GUI, LLC. All rights reserved.
+// Copyright © 2020-2026 hot-n-GUI, LLC. All rights reserved.
 //
 
 import Foundation
 
 /// A Utility class that allows us to support localization of our visible strings where the user of this package gets to define the different localizations.
 ///
-class Localizer {
+final class Localizer: @unchecked Sendable {
     /// Singleton
     static let shared = Localizer()
 
     /// Optional dictionary to look in first for a specified string, before looking at the default PLIST file.
-    static var overrideDictionary: NSDictionary?
+    nonisolated(unsafe) static var overrideDictionary: NSDictionary?
 
     /// The default dictionary containing default strings...
     lazy var localizableDictionary: NSDictionary = {

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Primary</key>
+	<dict>
+		<key>Countdown</key>
+		<dict>
+			<key>value</key>
+			<string>Tiempo restante:</string>
+			<key>comment</key>
+			<string>This is the label at the bottom of the screen that preceeds the actual countdown value.</string>
+		</dict>
+		<key>DescriptionTriangle</key>
+		<dict>
+			<key>value</key>
+			<string>Para continuar, arrastra el triángulo al recuadro de la esquina.</string>
+			<key>comment</key>
+			<string>This is the description shown on the screen just below the title when the target shape is a triangle.</string>
+		</dict>
+		<key>DescriptionSquare</key>
+		<dict>
+			<key>value</key>
+			<string>Para continuar, arrastra el cuadrado al recuadro de la esquina.</string>
+			<key>comment</key>
+			<string>This is the description shown on the screen just below the title when the target shape is a square.</string>
+		</dict>
+		<key>DescriptionPentagon</key>
+		<dict>
+			<key>value</key>
+			<string>Para continuar, arrastra el pentágono al recuadro de la esquina.</string>
+			<key>comment</key>
+			<string>This is the description shown on the screen just below the title when the target shape is a pentagon.</string>
+		</dict>
+		<key>DescriptionCircle</key>
+		<dict>
+			<key>value</key>
+			<string>Para continuar, arrastra el círculo al recuadro de la esquina.</string>
+			<key>comment</key>
+			<string>This is the description shown on the screen just below the title when the target shape is a circle.</string>
+		</dict>
+		<key>Title</key>
+		<dict>
+			<key>value</key>
+			<string>Control Parental</string>
+			<key>comment</key>
+			<string>This is the title displayed at the top of the screen.</string>
+		</dict>
+	</dict>
+	<key>TooManyAttempts</key>
+	<dict>
+		<key>OK</key>
+		<dict>
+			<key>value</key>
+			<string>Aceptar</string>
+			<key>comment</key>
+			<string>The title of the button used to dismiss the alert</string>
+		</dict>
+		<key>Title</key>
+		<dict>
+			<key>value</key>
+			<string>¡Demasiados intentos!</string>
+			<key>comment</key>
+			<string>The title of the alert.</string>
+		</dict>
+		<key>Description</key>
+		<dict>
+			<key>value</key>
+			<string>Has intentado demasiadas veces sin colocar la forma correcta en el recuadro.</string>
+			<key>comment</key>
+			<string>This is the message the user sees after they exceeded the maximum number of attempts.</string>
+		</dict>
+	</dict>
+	<key>TimeExpired</key>
+	<dict>
+		<key>OK</key>
+		<dict>
+			<key>value</key>
+			<string>Aceptar</string>
+			<key>comment</key>
+			<string>The title of the button used to dismiss the alert</string>
+		</dict>
+		<key>Title</key>
+		<dict>
+			<key>value</key>
+			<string>¡El tiempo ha expirado!</string>
+			<key>comment</key>
+			<string>The title of the alert.</string>
+		</dict>
+		<key>Description</key>
+		<dict>
+			<key>value</key>
+			<string>No arrastraste la forma correcta al recuadro destino a tiempo.</string>
+			<key>comment</key>
+			<string>This is the message the user sees after they exceeded the maximum number of attempts.</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

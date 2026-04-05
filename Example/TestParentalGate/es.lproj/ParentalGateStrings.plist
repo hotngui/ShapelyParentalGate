@@ -2,19 +2,95 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>Primary</key>
+    <dict>
+        <key>Title</key>
+        <dict>
+            <key>value</key>
+            <string>Control Parental</string>
+            <key>comment</key>
+            <string></string>
+        </dict>
+        <key>Countdown</key>
+        <dict>
+            <key>value</key>
+            <string>Tiempo restante:</string>
+            <key>comment</key>
+            <string></string>
+        </dict>
+        <key>DescriptionTriangle</key>
+        <dict>
+            <key>value</key>
+            <string>Para continuar, arrastra el triángulo al recuadro de la esquina.</string>
+            <key>comment</key>
+            <string></string>
+        </dict>
+        <key>DescriptionSquare</key>
+        <dict>
+            <key>value</key>
+            <string>Para continuar, arrastra el cuadrado al recuadro de la esquina.</string>
+            <key>comment</key>
+            <string></string>
+        </dict>
+        <key>DescriptionPentagon</key>
+        <dict>
+            <key>value</key>
+            <string>Para continuar, arrastra el pentágono al recuadro de la esquina.</string>
+            <key>comment</key>
+            <string></string>
+        </dict>
+        <key>DescriptionCircle</key>
+        <dict>
+            <key>value</key>
+            <string>Para continuar, arrastra el círculo al recuadro de la esquina.</string>
+            <key>comment</key>
+            <string></string>
+        </dict>
+    </dict>
     <key>TooManyAttempts</key>
     <dict>
         <key>OK</key>
         <dict>
             <key>value</key>
-            <string>Bueno</string>
+            <string>Aceptar</string>
             <key>comment</key>
             <string></string>
         </dict>
         <key>Title</key>
         <dict>
             <key>value</key>
-            <string>abucheo</string>
+            <string>¡Demasiados intentos!</string>
+            <key>comment</key>
+            <string></string>
+        </dict>
+        <key>Description</key>
+        <dict>
+            <key>value</key>
+            <string>Has intentado demasiadas veces sin colocar la forma correcta en el recuadro.</string>
+            <key>comment</key>
+            <string></string>
+        </dict>
+    </dict>
+    <key>TimeExpired</key>
+    <dict>
+        <key>OK</key>
+        <dict>
+            <key>value</key>
+            <string>Aceptar</string>
+            <key>comment</key>
+            <string></string>
+        </dict>
+        <key>Title</key>
+        <dict>
+            <key>value</key>
+            <string>¡El tiempo ha expirado!</string>
+            <key>comment</key>
+            <string></string>
+        </dict>
+        <key>Description</key>
+        <dict>
+            <key>value</key>
+            <string>No arrastraste la forma correcta al recuadro destino a tiempo.</string>
             <key>comment</key>
             <string></string>
         </dict>

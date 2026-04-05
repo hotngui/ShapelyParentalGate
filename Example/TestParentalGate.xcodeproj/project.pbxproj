@@ -3,16 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D423E0942506AFFF0054926B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D423E0932506AFFF0054926B /* AppDelegate.swift */; };
-		D423E0962506AFFF0054926B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D423E0952506AFFF0054926B /* SceneDelegate.swift */; };
-		D423E0982506AFFF0054926B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D423E0972506AFFF0054926B /* ViewController.swift */; };
-		D423E09B2506AFFF0054926B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D423E0992506AFFF0054926B /* Main.storyboard */; };
+		41A2C7B32F83047100423D76 /* ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A2C7B22F83047100423D76 /* ExampleApp.swift */; };
+		41A2C7B42F83047100423D76 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A2C7B12F83047100423D76 /* ContentView.swift */; };
+		41A2C7B62F83047100423D76 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 41A2C7B52F83047100423D76 /* Localizable.xcstrings */; };
 		D423E09D2506AFFF0054926B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D423E09C2506AFFF0054926B /* Assets.xcassets */; };
-		D423E0A02506AFFF0054926B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D423E09E2506AFFF0054926B /* LaunchScreen.storyboard */; };
 		D4596F68250D62F6001A39BB /* ShapelyParentalGate in Frameworks */ = {isa = PBXBuildFile; productRef = D4596F67250D62F6001A39BB /* ShapelyParentalGate */; };
 		D4C36E9A250B4D92007FCDC8 /* ParentalGateStrings.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4C36E9C250B4D92007FCDC8 /* ParentalGateStrings.plist */; };
 /* End PBXBuildFile section */
@@ -31,13 +29,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		41A2C7B12F83047100423D76 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		41A2C7B22F83047100423D76 /* ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleApp.swift; sourceTree = "<group>"; };
+		41A2C7B52F83047100423D76 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		41A2C7B72F83047100423D76 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = fr; path = fr.lproj/ParentalGateStrings.plist; sourceTree = "<group>"; };
 		D423E0902506AFFF0054926B /* TestParentalGate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestParentalGate.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D423E0932506AFFF0054926B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D423E0952506AFFF0054926B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D423E0972506AFFF0054926B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D423E09A2506AFFF0054926B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D423E09C2506AFFF0054926B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D423E09F2506AFFF0054926B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D423E0A12506AFFF0054926B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4596F69250F36EC001A39BB /* ShapelyParentalGate */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ShapelyParentalGate; path = ..; sourceTree = "<group>"; };
 		D4C36E9B250B4D92007FCDC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/ParentalGateStrings.plist; sourceTree = "<group>"; };
@@ -77,12 +74,10 @@
 		D423E0922506AFFF0054926B /* TestParentalGate */ = {
 			isa = PBXGroup;
 			children = (
-				D423E0932506AFFF0054926B /* AppDelegate.swift */,
-				D423E0952506AFFF0054926B /* SceneDelegate.swift */,
-				D423E0972506AFFF0054926B /* ViewController.swift */,
-				D423E0992506AFFF0054926B /* Main.storyboard */,
+				41A2C7B12F83047100423D76 /* ContentView.swift */,
+				41A2C7B22F83047100423D76 /* ExampleApp.swift */,
+				41A2C7B52F83047100423D76 /* Localizable.xcstrings */,
 				D423E09C2506AFFF0054926B /* Assets.xcassets */,
-				D423E09E2506AFFF0054926B /* LaunchScreen.storyboard */,
 				D423E0A12506AFFF0054926B /* Info.plist */,
 				D4C36E9C250B4D92007FCDC8 /* ParentalGateStrings.plist */,
 			);
@@ -126,11 +121,13 @@
 		D423E0882506AFFF0054926B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 2640;
 				TargetAttributes = {
 					D423E08F2506AFFF0054926B = {
 						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 2640;
 					};
 				};
 			};
@@ -142,9 +139,11 @@
 				en,
 				Base,
 				es,
+				fr,
 			);
 			mainGroup = D423E0872506AFFF0054926B;
 			packageReferences = (
+				D4596F6B250F36EC001A39BB /* XCLocalSwiftPackageReference ".." */,
 			);
 			productRefGroup = D423E0912506AFFF0054926B /* Products */;
 			projectDirPath = "";
@@ -160,10 +159,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D423E0A02506AFFF0054926B /* LaunchScreen.storyboard in Resources */,
 				D4C36E9A250B4D92007FCDC8 /* ParentalGateStrings.plist in Resources */,
+				41A2C7B62F83047100423D76 /* Localizable.xcstrings in Resources */,
 				D423E09D2506AFFF0054926B /* Assets.xcassets in Resources */,
-				D423E09B2506AFFF0054926B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,36 +172,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D423E0982506AFFF0054926B /* ViewController.swift in Sources */,
-				D423E0942506AFFF0054926B /* AppDelegate.swift in Sources */,
-				D423E0962506AFFF0054926B /* SceneDelegate.swift in Sources */,
+				41A2C7B32F83047100423D76 /* ExampleApp.swift in Sources */,
+				41A2C7B42F83047100423D76 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D423E0992506AFFF0054926B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D423E09A2506AFFF0054926B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D423E09E2506AFFF0054926B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D423E09F2506AFFF0054926B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		D4C36E9C250B4D92007FCDC8 /* ParentalGateStrings.plist */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D4C36E9B250B4D92007FCDC8 /* Base */,
 				D4C36E9D250B4DC9007FCDC8 /* es */,
+				41A2C7B72F83047100423D76 /* fr */,
 			);
 			name = ParentalGateStrings.plist;
 			sourceTree = "<group>";
@@ -215,6 +197,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -247,8 +230,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7689FTK2TN;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -268,6 +253,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -277,6 +263,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -309,8 +296,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7689FTK2TN;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -323,6 +312,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
@@ -334,16 +324,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7689FTK2TN;
 				INFOPLIST_FILE = TestParentalGate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hotngui.TestParentalGate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -353,16 +345,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7689FTK2TN;
 				INFOPLIST_FILE = TestParentalGate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hotngui.TestParentalGate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -390,9 +383,17 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		D4596F6B250F36EC001A39BB /* XCLocalSwiftPackageReference ".." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		D4596F67250D62F6001A39BB /* ShapelyParentalGate */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = D4596F6B250F36EC001A39BB /* XCLocalSwiftPackageReference ".." */;
 			productName = ShapelyParentalGate;
 		};
 /* End XCSwiftPackageProductDependency section */
