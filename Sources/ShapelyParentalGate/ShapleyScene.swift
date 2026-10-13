@@ -11,12 +11,13 @@ protocol ShapelySceneDelegate: AnyObject {
     func shapelyScene(_ scene: ShapelyScene, dropped shape: ShapelyScene.Shape?) -> Bool
 }
 
-/// This class uses _SpriteKit_ to generate a bunch of shapes that bounce around randomly. It allows the user to grab one of the shapes with their finger and drag
-/// it to the square target at the bottom of the screen. It then communicates to the delegate what shape was dropped over the target. The delegate then notifies this
-/// object whether or not the shape matched the one that was being looked for. If the dropped shape was incorrect it continues to bounce around the view.
+/// This class uses _SpriteKit_ to generate a bunch of shapes that bounce around randomly. It allows the user to grab one of the
+/// shapes with their finger and drag it to the square target at the bottom of the screen. It then communicates to the delegate what
+/// shape was dropped over the target. The delegate then notifies this object whether or not the shape matched the one that was
+/// being looked for. If the dropped shape was incorrect it continues to bounce around the view.
 ///
-/// - Note: Since we use phsyics to do much of the work there is not much needed in this class beyond created and adding the nodes. The exception is that we want
-/// to allow the user to grab a shape and drag it, so we need to handle those touch events ourselves.
+/// - Note: Since we use phsyics to do much of the work there is not much needed in this class beyond created and adding the nodes.
+/// The exception is that we want to allow the user to grab a shape and drag it, so we need to handle those touch events ourselves.
 ///
 class ShapelyScene: SKScene {
     private enum Constants {
@@ -40,7 +41,7 @@ class ShapelyScene: SKScene {
     var shapelySceneDelegate: ShapelySceneDelegate?
     var numberOfEachShape: Int = 1
 
-    //MARK: - Scene Methods
+    // MARK: - Scene Methods
 
     override func didMove(to view: SKView) {
         super.didMove(to: view)
@@ -105,11 +106,14 @@ class ShapelyScene: SKScene {
         addChild(targetNode)
     }
 
-    //MARK: - Touch Event Handling
+    // MARK: - Touch Event Handling
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch = touches.first
-        let touchLocation = touch!.location(in: self)
+        guard let touch = touches.first else {
+            return
+        }
+
+        let touchLocation = touch.location(in: self)
 
         if let body = physicsWorld.body(at: touchLocation), let node = body.node as? SKShapeNode {
             if node.name != "Target" {
@@ -165,24 +169,26 @@ class ShapelyScene: SKScene {
         grabbedPhysicsBody = nil
     }
 
-    //MARK: - Private Methods
+    // MARK: - Private Methods
 
     private func randomVector() -> CGVector {
         let xDirect = Int.random(in: 0...1) == 1 ? 1 : -1
         let yDirect = Int.random(in: 0...1) == 1 ? 1 : -1
 
-        let dx = CGFloat.random(in: 1...2) * CGFloat(xDirect)
-        let dy = CGFloat.random(in: 1...2) * CGFloat(yDirect)
+        let deltaX = CGFloat.random(in: 1...2) * CGFloat(xDirect)
+        let deltaY = CGFloat.random(in: 1...2) * CGFloat(yDirect)
 
-        return CGVector(dx: dx, dy: dy)
+        return CGVector(dx: deltaX, dy: deltaY)
     }
 
     private func randomColor() -> UIColor {
-        let colors: [UIColor] = [.systemBlue, .systemGreen, .systemYellow, .systemIndigo, .systemPink, .systemPurple, .systemRed, .systemTeal]
+        let colors: [UIColor] = [
+            .systemBlue, .systemGreen, .systemYellow, .systemIndigo, .systemPink, .systemPurple, .systemRed, .systemTeal
+        ]
         return colors[Int.random(in: 0..<colors.count)]
     }
 
-    //MARK: - Node Factories
+    // MARK: - Node Factories
 
     ///
     private func createCircleNode(color: UIColor) -> SKShapeNode {

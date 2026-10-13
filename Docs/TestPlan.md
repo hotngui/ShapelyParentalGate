@@ -32,11 +32,21 @@ Tests 1 and 3 assume an English simulator, since the default plist is chosen by 
 | 5 | All values default to nil except supportsTimeOut | Default init leaves every value `nil` except `supportsTimeOut == true` |
 | 6 | Explicit values are stored | Every initializer argument is stored unchanged |
 
+## CountdownFormattingTests — `ShapelyParentalGateViewModel.formattedCountdown(_:locale:)`
+
+`struct` suite with no shared state. The formatter is a `nonisolated static` pure function, so the tests don't build a view model, don't
+touch `Localizer`, and can't race the localization suite.
+
+| # | Test | Verifies |
+|---|---|---|
+| 7 | Countdown formats as zero-padded minutes and seconds (parameterized) | In `en_US`: 0 → `00:00`, 9 → `00:09`, 10 → `00:10`, 59 → `00:59`, 60 → `01:00`, 90 → `01:30`, 600 → `10:00`, 3661 → `61:01`. These exactly match the old `String(format: "%02d:%02d")` output |
+| 8 | Countdown follows the locale's conventions (parameterized) | 90 s → `01.30` in `fi_FI` (period separator) and `٠١:٣٠` in `ar_EG` (Arabic-Indic digits) |
+
 ## Candidates for later
 
 - Every key in the README's "String keys" table resolves (not `MISSING STRING`) in both `en` and `es`, as a parameterized test. That would
   catch renames like `ViewController` → `Primary`.
-- `ShapelyParentalGateViewModel`: `tick()` counts down, formats `mm:ss`, and raises the TimeExpired alert at zero.
+- `ShapelyParentalGateViewModel`: `tick()` counts down, updates `countdownValueText`, and raises the TimeExpired alert at zero.
 - `ShapelyParentalGateViewModel`: a wrong drop increments failures, and reaching `maximumFailedAttempts` raises the TooManyAttempts alert. A
   correct drop sets `succeeded`.
 - Configuration defaults applied by the view model (2 attempts, 10 s, 2 of each shape, timeout on).

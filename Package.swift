@@ -11,7 +11,7 @@ let package = Package(
     products: [
         .library(
             name: "ShapelyParentalGate",
-            targets: ["ShapelyParentalGate"]),
+            targets: ["ShapelyParentalGate"])
     ],
     targets: [
         .target(

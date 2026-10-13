@@ -83,10 +83,16 @@ final class ShapelyParentalGateViewModel {
 
         self.countdownLabelText = "Primary/Countdown".localized
 
-        // Format initial countdown value
-        let minutes = maxTime / 60
-        let seconds = maxTime % 60
-        self.countdownValueText = String(format: "%02d:%02d", minutes, seconds)
+        self.countdownValueText = Self.formattedCountdown(maxTime)
+    }
+
+    // MARK: - Formatting
+
+    /// Formats a number of seconds as zero-padded minutes and seconds (e.g. `00:10`, `01:30`) using the locale's digits and
+    /// separator.
+    ///
+    nonisolated static func formattedCountdown(_ seconds: Int, locale: Locale = .autoupdatingCurrent) -> String {
+        Duration.seconds(seconds).formatted(.time(pattern: .minuteSecond(padMinuteToLength: 2)).locale(locale))
     }
 
     // MARK: - Scene Factory
@@ -115,10 +121,7 @@ final class ShapelyParentalGateViewModel {
         guard supportsTimeOut, countdown > 0 else { return }
 
         countdown -= 1
-
-        let minutes = countdown / 60
-        let seconds = countdown % 60
-        countdownValueText = String(format: "%02d:%02d", minutes, seconds)
+        countdownValueText = Self.formattedCountdown(countdown)
 
         if countdown <= 0 {
             alertTitle = "TimeExpired/Title".localized

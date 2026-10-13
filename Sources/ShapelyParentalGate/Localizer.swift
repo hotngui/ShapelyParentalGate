@@ -5,7 +5,8 @@
 
 import Foundation
 
-/// A Utility class that allows us to support localization of our visible strings where the user of this package gets to define the different localizations.
+/// A Utility class that allows us to support localization of our visible strings where the user of this package gets to define
+/// the different localizations.
 ///
 final class Localizer: @unchecked Sendable {
     /// Singleton
@@ -30,7 +31,8 @@ final class Localizer: @unchecked Sendable {
     }
 
     /// This method does the look up of the specified string using the following steps:
-    ///  * Split the input string to see if it represents a simple hierarchy. Right now it only supports Category/Key and assumes both levels exist.
+    ///  * Split the input string to see if it represents a simple hierarchy. Right now it only supports Category/Key and assumes
+    ///    both levels exist.
     ///  * Attempt to lookup the value in the override dictionary if it exists
     ///  * Attempt to looup the value if the default dictionary
     ///  * Return an obvious default if not found in either dictionary.
