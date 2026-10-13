@@ -32,7 +32,7 @@ Or add it to your own `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/hotngui/ShapelyParentalGate.git", from: "2.0.0")
+    .package(url: "https://github.com/hotngui/ShapelyParentalGate.git", from: "3.0.0")
 ],
 targets: [
     .target(
