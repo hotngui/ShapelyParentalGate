@@ -7,7 +7,9 @@ The gate shows a bouncing cloud of shapes (circles, squares, triangles, pentagon
 ## Demo
 
 <p align="center">
-  <video src="https://www.hotngui.com/media/ShapelyParentalGate-demo.mp4" width="300"></video>
+  <a href="https://www.hotngui.com/media/ShapelyParentalGate-demo.mp4">
+    <img src="Docs/demo-thumbnail.png" width="300" alt="Demo video of the ShapelyParentalGate shape-matching challenge. Select to play.">
+  </a>
 </p>
 
 ## Requirements
