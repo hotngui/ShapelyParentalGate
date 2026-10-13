@@ -7,15 +7,14 @@ import Foundation
 import Testing
 @testable import ShapelyParentalGate
 
-/// `Localizer.overrideDictionary` is a process-wide static, so these tests run serially and clear it before and after each test.
+/// `Localizer.overrideDictionary` is a process-wide static, so these tests run serially and leave it `nil` when they finish. The
+/// suite is `@MainActor` because the view model suites read `Localizer` too; keeping every `Localizer` user on the main actor means
+/// their synchronous test bodies can never overlap.
 ///
 @Suite(.serialized)
-final class LocalizedStringTests {
+@MainActor
+struct LocalizedStringTests {
     init() {
-        Localizer.overrideDictionary = nil
-    }
-
-    deinit {
         Localizer.overrideDictionary = nil
     }
 
@@ -25,12 +24,14 @@ final class LocalizedStringTests {
 
     @Test("Override plist takes precedence over defaults") func overrideTakesPrecedence() throws {
         Localizer.overrideDictionary = try loadOverrideDictionary()
+        defer { Localizer.overrideDictionary = nil }
 
         #expect("Primary/Title".localized == "Override Title", "Unable to read from the override Plist file.")
     }
 
     @Test("Keys missing from the override fall back to defaults") func missingOverrideKeysFallBack() throws {
         Localizer.overrideDictionary = try loadOverrideDictionary()
+        defer { Localizer.overrideDictionary = nil }
 
         #expect("Primary/Countdown".localized == "Time Left:")
     }

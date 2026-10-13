@@ -45,7 +45,12 @@ final class ShapelyParentalGateViewModel {
 
     // MARK: - Init
 
-    init(configuration: ShapelyParentalGateStaticConfiguration) {
+    /// - Parameters:
+    ///   - configuration: The caller's overrides of the default gate behavior.
+    ///   - successShape: The shape the user must drop on the target. `nil` (the default) picks one at random; tests pass a
+    ///     specific shape so drop handling is deterministic.
+    ///
+    init(configuration: ShapelyParentalGateStaticConfiguration, successShape: ShapelyScene.Shape? = nil) {
         let maxFailed = configuration.maximumFailedAttempts ?? 2
         let maxTime = configuration.maximumTimeAllowed ?? 10
         let shapeCount = configuration.numberOfEachShape ?? 2
@@ -62,9 +67,9 @@ final class ShapelyParentalGateViewModel {
             Localizer.overrideDictionary = dictionary
         }
 
-        // Randomly select the target shape
+        // Randomly select the target shape unless one was specified
         let allShapes = ShapelyScene.Shape.allCases
-        let selected = allShapes[Int.random(in: 0..<allShapes.count)]
+        let selected = successShape ?? allShapes[Int.random(in: 0..<allShapes.count)]
         self.successShape = selected
 
         // Set localized text
