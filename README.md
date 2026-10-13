@@ -7,7 +7,7 @@ The gate shows a bouncing cloud of shapes (circles, squares, triangles, pentagon
 ## Demo
 
 <p align="center">
-  <video src="https://github.com/user-attachments/assets/f27ade48-b717-4ea9-b103-caf4e38e640d" width="300"></video>
+  <video src="https://www.hotngui.com/media/ShapelyParentalGate-demo.mp4" width="300"></video>
 </p>
 
 ## Requirements
