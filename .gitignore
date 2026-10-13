@@ -30,5 +30,9 @@ xcuserdata/
 # to avoid bloating SwiftPM clones for consumers.
 Docs/*.mp4
 
-# Local Claude Code session logs
+# Local AI-assistant files: Claude Code project memory, learning journal, session logs, and local settings.
+# They stay on disk but out of the repo.
+CLAUDE.md
+Journal.md
 SessionLogs/
+.claude/
