@@ -93,6 +93,29 @@ let configuration = ShapelyParentalGateStaticConfiguration(
 | `supportsTimeOut` | `true` | Whether the countdown is enforced. |
 | `maximumTimeAllowed` | `10` | Seconds the user has to drop the correct shape. |
 | `numberOfEachShape` | `2` | How many of each shape kind are created in the scene. |
+| `backgroundColor` | orange (`#FFBD3A`) | Color behind the bouncing shapes. |
+| `titleColor` | `.primary` | Color of the title text. |
+| `descriptionColor` | `.primary` | Color of the text telling the user which shape to drag. |
+| `countdownColor` | `.red` | Color of the countdown label and its time value. |
+| `targetFillColor` | `systemGray2` | Fill color of the target box in the bottom‑left corner. |
+| `targetOutlineColor` | `systemGray4` | Color of the target box's outline and glow. |
+
+### Matching your app's colors
+
+All six color parameters take a SwiftUI `Color` and are optional. Any you leave out keep the gate's original look, so you can change just the background or restyle everything:
+
+```swift
+let configuration = ShapelyParentalGateStaticConfiguration(
+    backgroundColor: Color(white: 0.15),
+    titleColor: .white,
+    descriptionColor: Color(white: 0.85),
+    countdownColor: .orange,
+    targetFillColor: Color(white: 0.3),
+    targetOutlineColor: .orange
+)
+```
+
+Colors from your asset catalog bring their light and dark variants with them. The gate doesn't adjust your colors, so check that the title, description, and countdown have enough contrast against your background (WCAG AA asks for at least 4.5:1 for normal text). The shapes keep their own random colors.
 
 ### Using the view directly
 
@@ -187,7 +210,7 @@ When the gate resolves a string it checks, in order:
 
 ## Example
 
-A complete working example lives in `Example/TestParentalGate`. It demonstrates the view modifier, a custom configuration, and full English / Spanish / French localization for both the example app's own UI and the parental gate's strings. Open `Example/TestParentalGate.xcodeproj`, pick a simulator, and run.
+A complete working example lives in `Example/TestParentalGate`. It demonstrates the view modifier, a custom configuration, a second gate restyled with custom colors ("Show Customized Gate"), and full English / Spanish / French localization for both the example app's own UI and the parental gate's strings. Open `Example/TestParentalGate.xcodeproj`, pick a simulator, and run.
 
 To try a different language, change the simulator's language under **Settings → General → Language & Region → iPhone Language**.
 

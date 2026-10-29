@@ -5,6 +5,7 @@
 
 import UIKit
 import SpriteKit
+import SwiftUI
 
 ///
 protocol ShapelySceneDelegate: AnyObject {
@@ -40,6 +41,8 @@ class ShapelyScene: SKScene {
 
     var shapelySceneDelegate: ShapelySceneDelegate?
     var numberOfEachShape: Int = 1
+    var targetFillColor: Color?
+    var targetOutlineColor: Color?
 
     // MARK: - Scene Methods
 
@@ -292,8 +295,8 @@ class ShapelyScene: SKScene {
     private func createTargetNode() -> SKShapeNode {
         let node = SKShapeNode(rectOf: Constants.targetSize)
 
-        node.fillColor = .systemGray2
-        node.strokeColor = .systemGray4
+        node.fillColor = targetFillColor.map { UIColor($0) } ?? .systemGray2
+        node.strokeColor = targetOutlineColor.map { UIColor($0) } ?? .systemGray4
         node.lineWidth = 2.0
         node.glowWidth = 2.0
         node.name = "Target"

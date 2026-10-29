@@ -31,8 +31,8 @@ Tests 1 and 3 assume an English simulator, since the default plist is chosen by 
 
 | # | Test | Verifies |
 |---|---|---|
-| 5 | All values default to nil except supportsTimeOut | Default init leaves every value `nil` except `supportsTimeOut == true` |
-| 6 | Explicit values are stored | Every initializer argument is stored unchanged |
+| 5 | All values default to nil except supportsTimeOut | Default init leaves every value `nil` except `supportsTimeOut == true`, including the six color overrides |
+| 6 | Explicit values are stored | Every initializer argument is stored unchanged, including the six color overrides |
 
 ## CountdownFormattingTests — `ShapelyParentalGateViewModel.formattedCountdown(_:locale:)`
 
@@ -71,6 +71,22 @@ still gets a random shape), so the tests are deterministic.
 | 18 | The alert appears exactly at the configured miss limit (parameterized: 1, 3, 5) | No alert after `limit − 1` misses, alert on miss number `limit` |
 | 19 | A drop with no recognizable shape is ignored | `dropped: nil` returns `false` and doesn't count toward the limit |
 | 20 | The target shape still succeeds after a miss | One wrong drop, then the right one → `succeeded`, no alert |
+
+## ViewModelColorTests — color overrides
+
+`@MainActor struct` (the view model is `@MainActor` and its init reads `Localizer`). Each override test uses a different color for
+every slot, so a crossed wire (the title getting the description's color, say) fails. The target-box tests present the scene in an
+offscreen `SKView` so `didMove(to:)` builds the real `"Target"` node, then read that node's colors.
+
+| # | Test | Verifies |
+|---|---|---|
+| 21 | Colors fall back to the original look when not configured | Default configuration → background `#FFBD3A` (`Color(red: 1.0, green: 0.742, blue: 0.230)`), title and description `.primary`, countdown `.red` |
+| 22 | Configured colors replace the defaults | Background, title, description, and countdown each equal the distinct color passed in |
+| 23 | The target box keeps its gray colors when not configured | Default configuration → the `"Target"` node's fill is `systemGray2` and its outline (`strokeColor`) is `systemGray4` |
+| 24 | Configured target colors reach the target box | `targetFillColor` and `targetOutlineColor` → the node's fill and stroke RGBA components match the configured values |
+
+Test 23 guards existing behavior, so it passes before the feature exists. It's there to catch a regression for apps that don't set the
+new options.
 
 ## Candidates for later
 

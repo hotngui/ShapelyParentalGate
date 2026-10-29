@@ -3,6 +3,7 @@
 // Copyright © 2020-2026 hot-n-GUI, LLC. All rights reserved.
 //
 
+import SwiftUI
 import Testing
 @testable import ShapelyParentalGate
 
@@ -18,6 +19,12 @@ struct StaticConfigurationTests {
         #expect(configuration.supportsTimeOut == true)
         #expect(configuration.maximumTimeAllowed == nil)
         #expect(configuration.numberOfEachShape == nil)
+        #expect(configuration.backgroundColor == nil)
+        #expect(configuration.titleColor == nil)
+        #expect(configuration.descriptionColor == nil)
+        #expect(configuration.countdownColor == nil)
+        #expect(configuration.targetFillColor == nil)
+        #expect(configuration.targetOutlineColor == nil)
     }
 
     @Test("Explicit values are stored") func allValuesExplicit() {
@@ -25,12 +32,24 @@ struct StaticConfigurationTests {
                                                                    maximumFailedAttempts: 666,
                                                                    supportsTimeOut: false,
                                                                    maximumTimeAllowed: 111,
-                                                                   numberOfEachShape: 6)
+                                                                   numberOfEachShape: 6,
+                                                                   backgroundColor: .black,
+                                                                   titleColor: .white,
+                                                                   descriptionColor: .gray,
+                                                                   countdownColor: .yellow,
+                                                                   targetFillColor: .mint,
+                                                                   targetOutlineColor: .pink)
 
         #expect(configuration.localizedStringsFilePath == "/file/path")
         #expect(configuration.maximumFailedAttempts == 666)
         #expect(configuration.supportsTimeOut == false)
         #expect(configuration.maximumTimeAllowed == 111)
         #expect(configuration.numberOfEachShape == 6)
+        #expect(configuration.backgroundColor == .black)
+        #expect(configuration.titleColor == .white)
+        #expect(configuration.descriptionColor == .gray)
+        #expect(configuration.countdownColor == .yellow)
+        #expect(configuration.targetFillColor == .mint)
+        #expect(configuration.targetOutlineColor == .pink)
     }
 }
