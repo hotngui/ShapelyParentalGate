@@ -8,6 +8,7 @@ import ShapelyParentalGate
 
 struct ContentView: View {
     @State private var showParentalGate = false
+    @State private var showCustomizedGate = false
     @State private var result: GateResult = .none
 
     private enum GateResult {
@@ -26,6 +27,24 @@ struct ContentView: View {
         )
     }
 
+    /// The same gate restyled with every color override, to show how an app can match the gate to its own look.
+    ///
+    private var customizedConfiguration: ShapelyParentalGateStaticConfiguration {
+        let filePath = Bundle.main.path(forResource: "ParentalGateStrings", ofType: "plist")
+
+        return ShapelyParentalGateStaticConfiguration(
+            localizedStringsFilePath: filePath,
+            maximumFailedAttempts: 2,
+            maximumTimeAllowed: 13,
+            backgroundColor: Color(white: 0.15),
+            titleColor: .white,
+            descriptionColor: Color(white: 0.85),
+            countdownColor: .orange,
+            targetFillColor: Color(white: 0.3),
+            targetOutlineColor: .orange
+        )
+    }
+
     var body: some View {
         VStack(spacing: 20) {
             Text("Parental Gate Example")
@@ -35,6 +54,11 @@ struct ContentView: View {
                 showParentalGate = true
             }
             .buttonStyle(.borderedProminent)
+
+            Button("Show Customized Gate") {
+                showCustomizedGate = true
+            }
+            .buttonStyle(.bordered)
 
             switch result {
             case .none:
@@ -52,6 +76,12 @@ struct ContentView: View {
         .shapelyParentalGate(
             isPresented: $showParentalGate,
             configuration: configuration
+        ) { success in
+            result = success ? .success : .failure
+        }
+        .shapelyParentalGate(
+            isPresented: $showCustomizedGate,
+            configuration: customizedConfiguration
         ) { success in
             result = success ? .success : .failure
         }

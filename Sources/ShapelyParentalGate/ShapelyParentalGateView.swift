@@ -28,8 +28,8 @@ public struct ShapelyParentalGateView: View {
     public var body: some View {
         GeometryReader { geometry in
             ZStack {
-                // Background color matching the original storyboard (#FFBD3A)
-                Color(red: 1.0, green: 0.742, blue: 0.230)
+                // Background color (defaults to the original storyboard's #FFBD3A)
+                viewModel.backgroundColor
                     .ignoresSafeArea()
 
                 // SpriteKit scene
@@ -41,10 +41,12 @@ public struct ShapelyParentalGateView: View {
                 VStack {
                     Text(viewModel.titleText)
                         .font(.largeTitle)
+                        .foregroundStyle(viewModel.titleColor)
                         .padding(.top, 10)
 
                     Text(viewModel.descriptionText)
                         .font(.title2)
+                        .foregroundStyle(viewModel.descriptionColor)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal)
 
@@ -54,13 +56,12 @@ public struct ShapelyParentalGateView: View {
                         HStack(spacing: 2) {
                             Text(viewModel.countdownLabelText)
                                 .font(.title3)
-                                .foregroundStyle(.red)
 
                             Text(viewModel.countdownValueText)
                                 .font(.title3)
                                 .monospacedDigit()
-                                .foregroundStyle(.red)
                         }
+                        .foregroundStyle(viewModel.countdownColor)
                         .padding(.bottom, 8)
                     }
                 }

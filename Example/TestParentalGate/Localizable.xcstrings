@@ -33,6 +33,22 @@
         }
       }
     },
+    "Show Customized Gate" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar Control Personalizado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afficher le Contrôle Personnalisé"
+          }
+        }
+      }
+    },
     "Show Parental Gate" : {
       "extractionState" : "stale",
       "localizations" : {

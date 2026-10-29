@@ -31,11 +31,17 @@ final class ShapelyParentalGateViewModel {
     let descriptionText: String
     let countdownLabelText: String
     let supportsTimeOut: Bool
+    let backgroundColor: Color
+    let titleColor: Color
+    let descriptionColor: Color
+    let countdownColor: Color
 
     // MARK: - Private State
 
     private let maximumFailedAttempts: Int
     private let numberOfEachShape: Int
+    private let targetFillColor: Color?
+    private let targetOutlineColor: Color?
 
     private(set) var countdown: Int
     private var failedAttempts = 0
@@ -60,6 +66,16 @@ final class ShapelyParentalGateViewModel {
         self.countdown = maxTime
         self.numberOfEachShape = shapeCount
         self.supportsTimeOut = timeOutEnabled
+
+        // The fallbacks are the original look; the orange (#FFBD3A) comes from the 1.0 storyboard
+        self.backgroundColor = configuration.backgroundColor ?? Color(red: 1.0, green: 0.742, blue: 0.230)
+        self.titleColor = configuration.titleColor ?? .primary
+        self.descriptionColor = configuration.descriptionColor ?? .primary
+        self.countdownColor = configuration.countdownColor ?? .red
+
+        // The scene owns the target's gray defaults, so these pass through as-is
+        self.targetFillColor = configuration.targetFillColor
+        self.targetOutlineColor = configuration.targetOutlineColor
 
         // Apply localization overrides if provided
         if let filePath = configuration.localizedStringsFilePath,
@@ -114,6 +130,8 @@ final class ShapelyParentalGateViewModel {
         newScene.scaleMode = .resizeFill
         newScene.shapelySceneDelegate = self
         newScene.numberOfEachShape = numberOfEachShape
+        newScene.targetFillColor = targetFillColor
+        newScene.targetOutlineColor = targetOutlineColor
         scene = newScene
         return newScene
     }
