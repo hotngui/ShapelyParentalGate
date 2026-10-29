@@ -50,7 +50,6 @@
       }
     },
     "Show Parental Gate" : {
-      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
