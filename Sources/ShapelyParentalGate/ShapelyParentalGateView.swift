@@ -62,6 +62,9 @@ public struct ShapelyParentalGateView: View {
                                 .monospacedDigit()
                         }
                         .foregroundStyle(viewModel.countdownColor)
+                        // Trailing alignment keeps the countdown clear of the target box in the bottom-left corner
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .padding(.horizontal)
                         .padding(.bottom, 8)
                     }
                 }
